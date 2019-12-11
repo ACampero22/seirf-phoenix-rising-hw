@@ -1,0 +1,22 @@
+body{
+	text-align: center;
+    margin: 0;
+    background-color: #93A5C8;
+}
+h1{
+    font-family: "Gelasio", serif;
+    font-weight: 900;
+    font-size: 45px;
+}
+h3{
+    font-family:"Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    color: #12154A;
+}
+ul{
+    display: table;
+    margin: auto;
+    list-style-type: none;
+    
+}
