@@ -3,10 +3,8 @@ console.log("it is working")
 let money =0;
 const cutGrass = () =>{
   money++;
-  //money = numberclicks;
-  //console.log("money is"+money)
   console.log("mouseclick = "+ money);
-  document.getElementById("demo").innerHTML = `You have earned ${money} dollars`;
+  document.getElementById("demo").innerHTML = `Money: ${money}$`;
   
   //numberclicks++;
   if(money===5){
@@ -15,12 +13,14 @@ const cutGrass = () =>{
   return money;
   
 }
-//const Instruments
-
+const Instruments ={};
+RustyScissors=0;
 const buyScissors = ()=>{
   if (money>=5){
   money= money-5;
-  document.getElementById("demo").innerHTML = `You have earned ${money} dollars`;
+  document.getElementById("demo").innerHTML = `Money: ${money}$`;
   alert("you bought rusty scissors for 5 dollars")}
+  RustyScissors ++
+  document.getElementById("upgrade").innerHTML = `Rusty Scissors: ${RustyScissors}`;
+  Instruments.Scissors = RustyScissors;
 }
-
