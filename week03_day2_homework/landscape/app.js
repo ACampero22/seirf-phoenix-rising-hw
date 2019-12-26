@@ -1,21 +1,22 @@
 console.log("it is working")
+let numberclicks = 0;
 const cutGrass = () =>{
-  let person = prompt("Would you like to use your teeth to cut the grass?");
-  let money =0;
-      if(person === "yes"){
-        money = money+1;
-        console.log(money)
-        document.getElementById("demo").innerHTML = `you have earn ${money} dollars`;
-        person = prompt("Would you like to use your teeth to cut the grass?");
-        if(person==="yes"){
-          money=2;
-          document.getElementById("demo").innerHTML = `you have earn ${money} dollars`;
-        }
-      }
-    
-
-
+  console.log("mouseclick = "+ numberclicks);
+  document.getElementById("demo").innerHTML = `You have earned ${numberclicks} dollars`;
+  numberclicks++;
+  if(numberclicks===5){
+    var rustyscissors = prompt("Would you like to upgrade to rusty scissors?")
+    if(rustyscissors==="yes"){
+      numberclicks = numberclicks+5;
+      document.getElementById("demo").innerHTML = `You have earned ${numberclicks} dollars`;
+    }
+  } 
 }
+
+console.log(cutGrass())
+
+
+
 
 
 // console.log("its working!")
