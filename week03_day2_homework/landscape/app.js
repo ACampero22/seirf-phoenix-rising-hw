@@ -1,14 +1,35 @@
-console.log("its working!")
-function myFunction() {
-    var person = prompt("Would you like to use your teeth to cut the grass");
-    if (person != null) {
-      document.getElementById("demo").innerHTML =
-      "You have earned 1$";
-    }
-  }
+console.log("it is working")
+const cutGrass = () =>{
+  let person = prompt("Would you like to use your teeth to cut the grass?");
+  let money =0;
+      if(person === "yes"){
+        money = money+1;
+        console.log(money)
+        document.getElementById("demo").innerHTML = `you have earn ${money} dollars`;
+        person = prompt("Would you like to use your teeth to cut the grass?");
+        if(person==="yes"){
+          money=2;
+          document.getElementById("demo").innerHTML = `you have earn ${money} dollars`;
+        }
+      }
+    
+
+
+}
+
+
+// console.log("its working!")
+// function myFunction() {
+//     var person = prompt("Would you like to use your teeth to cut the grass");
+//     if (person != null) {
+//       document.getElementById("demo").innerHTML =
+//       "You have earned 1$";
+//     }
+//   }
   
 
-const tool ={money: 0,tools:["teeth"]}
+// const tool ={money: 0,tools:["teeth"]}
+
 // create object named ability that includes userinput, money, tools values and initialize this values as arrays
 // update value tool to teeth
 // ask user if he wants to use his teeth to cut the grass
