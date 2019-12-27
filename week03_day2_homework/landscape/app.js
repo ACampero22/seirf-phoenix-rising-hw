@@ -45,6 +45,7 @@ const buyOldLawnmower = ()=>{
     OldLawnmower ++
     document.getElementById("oldtrusty").innerHTML = `Old-timey push lawnmower: ${OldLawnmower}`;
     Instruments.oldLawnmower = OldLawnmower;
+    alert("You bought an old trusty lawnnower");
   }
   else{
     alert("You need to unlock scissors and have 25$ in order to buy old-timey push lawnmower")
@@ -59,5 +60,30 @@ const useOldLawnmower = ()=>{
   }
   else{
     alert("You dont own an old-time push lawnmower")
+  }
+}
+// function to buy new lawnmower
+let newLawnmower =0;
+const buyNewLawnmower= () =>{
+  if(OldLawnmower>=1 && money>=250){
+    money = money - 250;
+    document.getElementById("demo").innerHTML = `Money: ${money}$`;
+    newLawnmower++;
+    document.getElementById("newfancy").innerHTML = `Fancy battery-powered lawnmower: ${newLawnmower}`;
+    Instruments.NewLawnmower = newLawnmower;
+    alert("You bought a new fancy lawnnower");
+  }
+  else{
+    alert("You need to unlock old-time push lawnmower and have 250$ in order to buy fancy battery-powered lawnmower")
+  }
+}
+// function to use fancy ne laewnmower
+const useNewLawnmower = () =>{
+  if (newLawnmower>=1){
+    money = money+100;
+    document.getElementById("demo").innerHTML = `Money: ${money}$`;
+  }
+  else{
+    alert("You do not own a fancy battery-powered lawnmower")
   }
 }
