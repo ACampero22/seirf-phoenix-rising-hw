@@ -22,7 +22,7 @@ const buyScissors = ()=>{
   document.getElementById("upgrade").innerHTML = `Rusty Scissors: ${RustyScissors}`;
   Instruments.Scissors = RustyScissors;
   }
-  else {
+  else{
     alert("You dont have enough money to buy rusty scissors")
   }
 }
@@ -36,6 +36,7 @@ const useRustyScissors = ()=>{
     alert("You dont own a pair of rusty scissors")
   }
 }
+
 // function to buy lawnmower if you have bought scissirs before
 let OldLawnmower=0;
 const buyOldLawnmower = ()=>{
@@ -52,6 +53,7 @@ const buyOldLawnmower = ()=>{
   }
   
 }
+
 // function to use lawnmow
 const useOldLawnmower = ()=>{
   if( OldLawnmower>=1){
@@ -86,4 +88,34 @@ const useNewLawnmower = () =>{
   else{
     alert("You do not own a fancy battery-powered lawnmower")
   }
+}
+// function to hire students
+let students =0;
+const hireStudents=()=>{
+  if(newLawnmower>=1 && money>=500){
+    money= money-500;
+    document.getElementById("demo").innerHTML = `Money: ${money}$`;
+    students++;
+    document.getElementById("students").innerHTML = `Group Starving Students: ${students}`;
+    Instruments.groupstudents = students;
+    alert("You hired a group of starving students");
+  } 
+  else{
+    alert("You need to unlock fancy lawnmower in order to hire group of starving students")
+  }
+}
+//function use students
+const useStudents= () =>{
+   if(students<=0){
+     alert("You did not hire a group of students")
+     return;
+   }
+  money= 250+money;
+  document.getElementById("demo").innerHTML = `Money: ${money}$`;
+  if (money>=1000){
+    alert("YOU WON");
+    document.location.reload();
+    //clearInterval
+  }
+
 }
